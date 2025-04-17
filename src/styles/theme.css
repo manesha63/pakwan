@@ -1,0 +1,100 @@
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Primary Colors */
+  --primary-color: #2C1810;  /* Deep Brown */
+  --primary-light: #4a2b1d;
+  --primary-dark: #1a0f09;
+  
+  /* Secondary Colors */
+  --secondary-color: #8B4513;
+  --secondary-light: #ff7b1f;
+  --secondary-dark: #cc4d00;
+  
+  /* Neutral Colors */
+  --background-color: #FFF8F0;
+  --surface-color: #ffffff;
+  --border-color: #e0e0e0;
+  
+  /* Text Colors */
+  --text-primary: #2C1810;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  
+  /* Status Colors */
+  --success-color: #4CAF50;
+  --warning-color: #FFC107;
+  --error-color: #f44336;
+  --info-color: #2196F3;
+  
+  /* Hover States */
+  --hover-color: #f5f5f5;
+  --hover-primary: #4a2b1d;
+  --hover-secondary: #ff7b1f;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  /* Brand Colors */
+  --accent-color: #DEB887;
+  --text-color: #2C1810;
+  
+  /* Typography */
+  --font-heading: 'Kaushan Script', cursive;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* Global Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Specific Heading Sizes */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Logo Specific Style */
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+} 

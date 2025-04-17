@@ -1,0 +1,88 @@
+.admin-tests {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-tests h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.test-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.test-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.test-button:disabled {
+  background-color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.results-message {
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.results-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.results-message.failure {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.test-details {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.test-details h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.test-details ol {
+  padding-left: 1.5rem;
+}
+
+.test-details li {
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .admin-tests {
+    margin: 1rem;
+    padding: 1rem;
+  }
+} 

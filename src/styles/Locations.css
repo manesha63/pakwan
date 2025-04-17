@@ -1,0 +1,132 @@
+.locations-container {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 2rem;
+}
+
+.locations-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.locations-header h1 {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.nearest-location {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.nearest-location h2 {
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-name {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.location-address {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.location-phone {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.select-location-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.select-location-button:hover {
+  background-color: var(--dark-brown);
+}
+
+.all-locations {
+  margin-top: 3rem;
+}
+
+.all-locations h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.location-card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location-card h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.hours-section {
+  margin-top: 1.5rem;
+}
+
+.hours-section h4 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.hours-text {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .locations-container {
+    padding: 1rem;
+    margin-top: 60px;
+  }
+
+  .locations-header h1 {
+    font-size: 2rem;
+  }
+
+  .nearest-location {
+    padding: 1.5rem;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+} 

@@ -1,0 +1,56 @@
+{
+  "menu_categories": [
+    {
+      "id": "appetizers",
+      "name": "APPETIZERS",
+      "items": [
+        {
+          "id": "papadum",
+          "name": "Papadum",
+          "description": "Thin crispy lentil crackers",
+          "price": 3.99,
+          "is_available": true,
+          "dietary_options": []
+        },
+        {
+          "id": "pakoras",
+          "name": "Pakoras",
+          "description": "Mixed vegetable dipped into seasoned chickpea batter",
+          "price": 5.99,
+          "is_available": true,
+          "dietary_options": ["Vegetarian"]
+        },
+        {
+          "id": "samosa_2_pieces",
+          "name": "Samosa (2 Pieces)",
+          "description": "Spicy potato stuffed, seasoned chickpea batter",
+          "price": 5.99,
+          "is_available": true,
+          "dietary_options": ["Vegetarian"]
+        }
+      ]
+    },
+    {
+      "id": "vegetarian",
+      "name": "VEGETARIAN",
+      "items": [
+        {
+          "id": "aloo_palak",
+          "name": "Aloo Palak",
+          "description": "Potatoes cooked with spinach",
+          "price": 12.99,
+          "is_available": true,
+          "dietary_options": ["Vegetarian", "Can be made vegan"]
+        },
+        {
+          "id": "channa_masala",
+          "name": "Channa Masala",
+          "description": "Chickpeas cooked with a medley of spices",
+          "price": 11.99,
+          "is_available": true,
+          "dietary_options": ["Vegetarian", "Can be made vegan"]
+        }
+      ]
+    }
+  ]
+} 

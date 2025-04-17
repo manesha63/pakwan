@@ -1,0 +1,20 @@
+{
+  "customerName": "Test Customer",
+  "customerEmail": "test@example.com",
+  "customerPhone": "+1234567890",
+  "items": [
+    {
+      "id": "1",
+      "name": "Chicken Tikka Masala",
+      "price": 15.99,
+      "quantity": 2,
+      "specialRequest": "Spicy please"
+    }
+  ],
+  "subtotal": 31.98,
+  "tax": 2.88,
+  "total": 34.86,
+  "status": "pending",
+  "paymentStatus": "pending",
+  "createdAt": "2024-04-17T20:04:03.122Z"
+} 

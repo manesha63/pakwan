@@ -1,0 +1,63 @@
+.confirmation-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #DEB887; /* Burly wood - lighter brown */
+  text-align: center;
+}
+
+.confirmation-container h2 {
+  color: #2C1810; /* Dark brown */
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.confirmation-details {
+  margin: 2rem 0;
+  color: #5C3D2E; /* Medium brown */
+  line-height: 1.8;
+}
+
+.confirmation-details strong {
+  color: #8B4513; /* Saddle brown */
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.confirmation-actions button {
+  background-color: #2C1810; /* Dark brown */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.confirmation-actions button:hover {
+  background-color: #8B4513; /* Saddle brown */
+}
+
+@media (max-width: 768px) {
+  .confirmation-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .confirmation-actions button {
+    width: 100%;
+  }
+} 

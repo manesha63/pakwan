@@ -1,0 +1,215 @@
+.guest-checkout {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.guest-checkout h2 {
+  color: #2C1810;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.guest-checkout .form-group label {
+  display: block !important;
+  margin-bottom: 0.5rem !important;
+  color: #8B4513 !important;
+  font-weight: 600 !important;
+  font-size: 1.05rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.guest-checkout .form-group label[for="name"],
+.guest-checkout .form-group label[for="phone"],
+.guest-checkout .form-group label[for="pickupTime"] {
+  position: relative;
+}
+
+.guest-checkout .form-group label[for="name"]::after,
+.guest-checkout .form-group label[for="phone"]::after,
+.guest-checkout .form-group label[for="pickupTime"]::after {
+  content: "*";
+  color: #d32f2f !important;
+  margin-left: 4px;
+}
+
+.guest-checkout .form-group label[for="email"] {
+  color: #666 !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+}
+
+.guest-checkout .form-group label[for="email"]::after {
+  content: " (Optional)";
+  color: #666 !important;
+  font-size: 0.9rem !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #DEB887;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #2C1810;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8B4513;
+  box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.error-message {
+  background-color: #fff3f3;
+  color: #d32f2f;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message.card-error {
+  background-color: #fdecea;
+  border: 1px solid #ffa4a4;
+}
+
+.order-summary {
+  background-color: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.order-summary h3 {
+  color: #2C1810;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #DEB887;
+  color: #2C1810;
+  font-size: 1.1rem;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2C1810;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover:not(:disabled) {
+  background-color: #8B4513;
+}
+
+.checkout-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.card-element-container {
+  padding: 0.75rem;
+  border: 1px solid #DEB887;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.card-element-container:focus-within {
+  outline: none;
+  border-color: #8B4513;
+  box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.1);
+}
+
+@media (max-width: 768px) {
+  .guest-checkout {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Loading Spinner Styles */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #2C1810;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loading-overlay p {
+  color: #2C1810;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Disabled state styles */
+input:disabled,
+.card-element-container.StripeElement--disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+} 

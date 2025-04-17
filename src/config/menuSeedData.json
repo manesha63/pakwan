@@ -1,0 +1,112 @@
+{
+  "menu": {
+    "Appetizers": {
+      "items": [
+        {
+          "name": "Papadum (2 Pieces)",
+          "description": "Crispy thin seasoned wafer",
+          "price": 3.99,
+          "available": true
+        },
+        {
+          "name": "Pakora",
+          "description": "Mix vegetables fritters",
+          "price": 5.99,
+          "available": true
+        },
+        {
+          "name": "Samosa (2 Pieces)",
+          "description": "Crispy pastry stuffed with spiced potatoes and peas",
+          "price": 4.99,
+          "available": true
+        }
+      ]
+    },
+    "Vegetarian Delights": {
+      "items": [
+        {
+          "name": "Aloo Palak (Ask for Vegan)",
+          "description": "Nutritious combination of spinach and potatoes",
+          "price": 12.99,
+          "available": true
+        },
+        {
+          "name": "Chana Masala",
+          "description": "Chickpeas cooked in a rich, spicy tomato sauce",
+          "price": 11.99,
+          "available": true
+        },
+        {
+          "name": "Baingan Bharta",
+          "description": "Roasted eggplant mashed and cooked with spices",
+          "price": 12.99,
+          "available": true
+        }
+      ]
+    },
+    "Biryani": {
+      "items": [
+        {
+          "name": "Chicken Biryani",
+          "description": "Fragrant basmati rice cooked with tender chicken pieces and aromatic spices",
+          "price": 14.99,
+          "available": true
+        },
+        {
+          "name": "Vegetable Biryani",
+          "description": "Basmati rice cooked with mixed vegetables and aromatic spices",
+          "price": 12.99,
+          "available": true
+        }
+      ]
+    },
+    "Curries": {
+      "items": [
+        {
+          "name": "Butter Chicken",
+          "description": "Tender chicken pieces in a rich, creamy tomato sauce",
+          "price": 15.99,
+          "available": true
+        },
+        {
+          "name": "Lamb Rogan Josh",
+          "description": "Tender lamb pieces in a rich, aromatic curry sauce",
+          "price": 16.99,
+          "available": true
+        }
+      ]
+    },
+    "Breads": {
+      "items": [
+        {
+          "name": "Garlic Naan",
+          "description": "Soft, fluffy bread with garlic and butter",
+          "price": 3.99,
+          "available": true
+        },
+        {
+          "name": "Plain Naan",
+          "description": "Traditional soft, fluffy bread",
+          "price": 2.99,
+          "available": true
+        }
+      ]
+    },
+    "Desserts": {
+      "items": [
+        {
+          "name": "Gulab Jamun",
+          "description": "Sweet milk dumplings in sugar syrup",
+          "price": 4.99,
+          "available": true
+        },
+        {
+          "name": "Kheer",
+          "description": "Traditional rice pudding with nuts and cardamom",
+          "price": 4.99,
+          "available": true
+        }
+      ]
+    }
+  }
+} 

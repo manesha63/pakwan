@@ -1,0 +1,598 @@
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+}
+
+.menu-header h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-header p {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #f5f5f5;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.category-tab.active {
+  background-color: #2C1810; /* Dark brown */
+  color: white;
+}
+
+.menu-loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.menu-error {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff3f3;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.menu-error p {
+  color: #d32f2f;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-redirect-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-redirect-btn:hover {
+  background-color: #43A047;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item.unavailable {
+  opacity: 0.7;
+  background-color: #f5f5f5;
+}
+
+.item-details h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.item-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.item-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2C1810;
+}
+
+.menu-item .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2C1810;
+  margin: 8px 0;
+}
+
+.dietary-options {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+.dietary-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
+}
+
+.dietary-tag.vegetarian {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+
+.dietary-tag.vegan {
+  background-color: #F1F8E9;
+  color: #558B2F;
+  border: 1px solid #C5E1A5;
+}
+
+.dietary-tag.gluten-free {
+  background-color: #FFF3E0;
+  color: #EF6C00;
+  border: 1px solid #FFCC80;
+}
+
+.dietary-tag.can-be-made-vegan {
+  background-color: #F1F8E9;
+  color: #558B2F;
+  border: 1px dashed #C5E1A5;
+  font-style: italic;
+}
+
+/* Remove any default styles that might interfere */
+.menu-item .dietary-options span {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* Ensure the dietary tags are properly spaced within the menu item */
+.menu-item .dietary-options {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+.menu-item .dietary-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.menu-item .dietary-tag.vegetarian {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+
+.menu-item .dietary-tag.vegan {
+  background-color: #F1F8E9;
+  color: #558B2F;
+  border: 1px solid #C5E1A5;
+}
+
+.menu-item .dietary-tag.gluten-free {
+  background-color: #FFF3E0;
+  color: #EF6C00;
+  border: 1px solid #FFCC80;
+}
+
+.menu-item .dietary-tag.can-be-made-vegan {
+  background-color: #F1F8E9;
+  color: #558B2F;
+  border: 1px dashed #C5E1A5;
+  font-style: italic;
+}
+
+/* Ensure proper spacing between elements */
+.menu-item .item-header {
+  margin-bottom: 12px;
+}
+
+.menu-item .description {
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.menu-item .item-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dietary-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2C1810; /* Dark brown */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background-color: #8B4513; /* Saddle brown for hover */
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 1rem;
+  }
+
+  .menu-header h1 {
+    font-size: 2rem;
+  }
+
+  .category-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.location-header {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.location-info {
+  flex: 1;
+}
+
+.location-info h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.location-info p {
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.hours-info {
+  margin-top: 0.5rem;
+}
+
+.change-location-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.change-location-button:hover {
+  background-color: var(--hover-color);
+}
+
+.customization-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  color: #2C1810;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.customization-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quantity-section,
+.spice-level-section,
+.special-instructions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quantity-section label,
+.spice-level-section label,
+.special-instructions-section label {
+  font-weight: 600;
+  color: #2C1810;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-controls button {
+  background-color: #2C1810;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-controls button:hover {
+  background-color: #8B4513;
+}
+
+.quantity-controls span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
+}
+
+.spice-level-section select {
+  padding: 0.75rem;
+  border: 1px solid #DEB887;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #2C1810;
+  background-color: white;
+  cursor: pointer;
+}
+
+.spice-level-section select:focus {
+  outline: none;
+  border-color: #8B4513;
+}
+
+.special-instructions-section textarea {
+  padding: 0.75rem;
+  border: 1px solid #DEB887;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-height: 100px;
+  resize: vertical;
+  color: #2C1810;
+}
+
+.special-instructions-section textarea:focus {
+  outline: none;
+  border-color: #8B4513;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #f5f5f5;
+  color: #2C1810;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.modal-actions .add-to-cart-btn {
+  background-color: #2C1810;
+  color: white;
+  margin-top: 0;
+}
+
+.modal-actions .add-to-cart-btn:hover {
+  background-color: #8B4513;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions button {
+    width: 100%;
+  }
+}
+
+.vegan-option-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vegan-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #2C1810;
+  font-weight: 600;
+}
+
+.vegan-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #2C1810;
+}
+
+.vegan-note {
+  font-size: 0.9rem;
+  color: #8B4513;
+  font-style: italic;
+  margin-top: 0.25rem;
+  padding-left: 1.5rem;
+}
+
+.price,
+.cart-total,
+.order-total,
+.summary-total {
+  font-family: system-ui, -apple-system, sans-serif;
+  white-space: nowrap;
+}
+
+.price::before,
+.cart-total span::before,
+.order-total span::before,
+.summary-total span:last-child::before {
+  content: '$';
+  margin-right: 1px;
+}
+
+.cart-total,
+.order-total,
+.summary-total {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2C1810;
+} 
