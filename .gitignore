@@ -44,3 +44,10 @@ Thumbs.db
 
 # Optional eslint cache
 .eslintcache
+
+# Sensitive files
+**/serviceAccountKey.json
+**/firebase-admin.json
+**/firebase.json
+**/*.key
+**/*.pem
